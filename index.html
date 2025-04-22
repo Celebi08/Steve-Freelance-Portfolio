@@ -2,143 +2,195 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Steve Ryan Bach Miguel | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script>
-    function toggleDetails(id) {
-      const content = document.getElementById(id);
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Steve Ryan Bach Miguel - Freelance Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #eaf1f8;
+      --text: #333;
+      --card: #fff;
+      --accent: #004aad;
+      --light-text: #7f8c8d;
+    }
+    body.dark-mode {
+      --bg: #121212;
+      --text: #f5f5f5;
+      --card: #1e1e1e;
+      --accent: #4dabf7;
+      --light-text: #bbb;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: var(--card);
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      color: var(--text);
+      font-size: 2.4em;
+    }
+    header p {
+      color: var(--light-text);
+      font-size: 1.1em;
+    }
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .toggle-btn:hover {
+      background: #0070d1;
+    }
+    .main {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: var(--card);
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: background 0.3s;
+    }
+    h2 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+    ul {
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+    .contact p, .contact i {
+      margin: 5px 0;
+      color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      color: var(--light-text);
+    }
+    .tagline {
+      font-weight: 600;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+    .toggle-content {
+      display: none;
+      margin-top: 10px;
+    }
+    .toggle-btn-small {
+      background: none;
+      border: none;
+      color: var(--accent);
+      cursor: pointer;
+      padding: 0;
+      margin-top: 5px;
+    }
+    .toggle-btn-small:hover {
+      text-decoration: underline;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      .card {
+        padding: 20px;
+      }
+      .toggle-btn {
+        padding: 6px 10px;
+        font-size: 0.9em;
       }
     }
-  </script>
+  </style>
 </head>
 <body>
   <header>
-    <h1>Steve Ryan Bach Miguel</h1>
-    <p>Professional Portfolio</p>
+    <h1>Steve Ryan Bach G. Miguel</h1>
+    <p>Tech Support | Digital Marketer | Sales SME | Admin & CRM Specialist</p>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
   </header>
+  <div class="main">
+    <!-- Existing content here -->
 
-  <section id="experience">
-    <h2>Work Experience</h2>
-
-    <div class="job">
-      <h3 onclick="toggleDetails('telus')">Technical Support Representative - Telus Digital <span>(Oct 25, 2023 - March 31, 2025)</span></h3>
-      <ul id="telus" style="display: none;">
-        <li>I provided efficient support for email and computer troubleshooting.</li>
-        <li>I assisted customers with resolving software issues, connectivity problems, and email configuration, ensuring clear communication and quick resolution.</li>
-        <li>My role involved documenting issues, offering step-by-step guidance, and maintaining strong customer satisfaction by addressing technical challenges in a timely manner.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <h3 onclick="toggleDetails('decode')">Business Development Manager - Decode Global Philippines Inc. <span>(March 2023 - Sept 2023)</span></h3>
-      <ul id="decode" style="display: none;">
-        <li>Developed and executed innovative sales strategies.</li>
-        <li>Established and nurtured strategic partnerships with other leaders, expanding the company's market reach and enhancing brand visibility.</li>
-        <li>Conducted comprehensive market research to drive product development efforts and align offerings with market demands.</li>
-        <li>Set up personal meetings with clients/prospects to introduce our business and discuss investment options.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <h3 onclick="toggleDetails('philtech')">Digital Marketing Coordinator - Philtech Inc. <span>(April 2022 - March 2023)</span></h3>
-      <ul id="philtech" style="display: none;">
-        <li>Managed and organized the company's social media accounts.</li>
-        <li>Analyzed digital marketing trends and created content for social media posting.</li>
-        <li>Collaborated with cross-functional teams in the department to create captivating and relevant content, driving brand awareness and customer engagement.</li>
-        <li>Managed and grew social media presence, increasing followers and engagement through strategic content planning and audience targeting.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <h3 onclick="toggleDetails('admerex')">Teamleader - Admerex Solution Inc. <span>(April 2021 - March 2022)</span></h3>
-      <ul id="admerex" style="display: none;">
-        <li>I guide and support a team of online proctors. My focus is on ensuring team performance and quality.</li>
-        <li>I provide training and feedback to team members.</li>
-        <li>I help resolve complex issues and escalations.</li>
-        <li>Monitoring team adherence to protocols is part of my role.</li>
-        <li>I facilitate communication and collaboration within the team.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <h3 onclick="toggleDetails('concentrix')">Sales Rep / SME - Concentrix <span>(Feb 2020 - Nov 2020)</span></h3>
-      <ul id="concentrix" style="display: none;">
-        <li>I guide agents through their daily routine and remind them not to forget quality and satisfaction when doing their tasks while being happy on the job.</li>
-        <li>Assisted agent escalations through chat via Windows Live, Snapchat, and email when the agent couldn’t handle the customer’s concern.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <h3 onclick="toggleDetails('citihomes')">Sales Manager - Citihomes Builder and Development Inc. (MyCitihomes) <span>(March 2015 - April 2018)</span></h3>
-      <ul id="citihomes" style="display: none;">
-        <li>Daily huddles before deploying a team on a to-do list.</li>
-        <li>Weekly meetings with the team to ensure goal setting and strategic planning.</li>
-        <li>Managed online ads and Facebook page promotions to attract prospective clients.</li>
-        <li>Scheduled weekly client acquisition events in malls and other prospect locations.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <h3 onclick="toggleDetails('zynco')">Encoder / Data Entry / Team Captain - Zynco@Uno Cybercafe <span>(Sept 2013 - Feb 2015)</span></h3>
-      <ul id="zynco" style="display: none;">
-        <li>Encoded sales, vouchers, and time logs using MS Excel and Word.</li>
-        <li>Trained teams for e-games tournaments during weekends or spare time.</li>
-        <li>Held weekend meetings to review performance, strategies, and audit data.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <h3 onclick="toggleDetails('shavara')">Encoder / Data Entry - Shavara Machine And Welding Inc. <span>(Aug 2011 - Sept 2013)</span></h3>
-      <ul id="shavara" style="display: none;">
-        <li>Checked inventory against daily stock list using MS Word and Excel.</li>
-        <li>Processed and printed order slips.</li>
-        <li>Compiled and verified data for accuracy before forwarding to management.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <h3 onclick="toggleDetails('jaroteac')">Encoder / Data Entry - Jaroteac Hardware Inc. <span>(June 2008 - Aug 2011)</span></h3>
-      <ul id="jaroteac" style="display: none;">
-        <li>Checked warehouse stock for old and new arrivals and updated inventory in MS Word and Excel.</li>
-        <li>Processed and printed order slips.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <details>
-      <summary>Photo Editing for Advertisement</summary>
+    <div class="card">
+      <h2><i class="fas fa-images"></i> Gallery: Photo Editing for Advertisement</h2>
       <div class="gallery">
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/a05015ef-0fc6-453f-a761-4f2c2ce6150a" alt="Ad Image 1" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/25b3e28e-b955-4846-b527-f8faa3675937" alt="Ad Image 2" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/671e252e-2f83-45f4-8b43-81bdbd41fe8e" alt="Ad Image 3" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/1d70ddfa-77ef-4494-b2f6-0fd103ea4e9a" alt="Ad Image 4" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/d2779dd5-0d53-4247-b247-27ea932e3852" alt="Ad Image 5" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/62dd5dac-fea2-4475-b33d-04699ddc5af1" alt="Ad Image 6" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/f4805a04-030f-42e1-b3de-833d787283c6" alt="Ad Image 7" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/3a742d4e-1474-4170-9d37-7e1140d9d8be" alt="Ad Image 8" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/c1b81213-a0a7-42cf-ba04-f4f9a782449f" alt="Ad Image 9" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/609536b6-357e-4bce-bdcc-a23923dd3728" alt="Ad Image 10" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/4f6b8e03-e430-4aa5-8dbf-3ff2ede69344" alt="Ad Image 11" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/41151845-05f5-4cd6-984f-a534e0c484c0" alt="Ad Image 12" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/cd7e68c3-e220-46a8-a503-d67bc5ad1b1b" alt="Ad Image 13" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/9e4ebeb3-08ef-423b-95c5-e0b930ede5b3" alt="Ad Image 14" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/d89721f7-effb-4f59-94ce-15d63f737407" alt="Ad Image 15" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/7c1a64fb-9b40-4cd3-b471-00a65b417b35" alt="Ad Image 16" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/a05015ef-0fc6-453f-a761-4f2c2ce6150a" alt="Design 1">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/25b3e28e-b955-4846-b527-f8faa3675937" alt="Design 2">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/671e252e-2f83-45f4-8b43-81bdbd41fe8e" alt="Design 3">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/1d70ddfa-77ef-4494-b2f6-0fd103ea4e9a" alt="Design 4">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/d2779dd5-0d53-4247-b247-27ea932e3852" alt="Design 5">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/62dd5dac-fea2-4475-b33d-04699ddc5af1" alt="Design 6">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/f4805a04-030f-42e1-b3de-833d787283c6" alt="Design 7">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/3a742d4e-1474-4170-9d37-7e1140d9d8be" alt="Design 8">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/c1b81213-a0a7-42cf-ba04-f4f9a782449f" alt="Design 9">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/609536b6-357e-4bce-bdcc-a23923dd3728" alt="Design 10">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/4f6b8e03-e430-4aa5-8dbf-3ff2ede69344" alt="Design 11">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/41151845-05f5-4cd6-984f-a534e0c484c0" alt="Design 12">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/cd7e68c3-e220-46a8-a503-d67bc5ad1b1b" alt="Design 13">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/9e4ebeb3-08ef-423b-95c5-e0b930ede5b3" alt="Design 14">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/d89721f7-effb-4f59-94ce-15d63f737407" alt="Design 15">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/7c1a64fb-9b40-4cd3-b471-00a65b417b35" alt="Design 16">
       </div>
-    </details>
-  </section>
+    </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-    <p>Phone: 123-456-7890</p>
-  </section>
+    <div class="card contact">
+      <h2>Contact</h2>
+      <p><i class="fas fa-envelope"></i> toriyama18@gmail.com</p>
+      <p><i class="fas fa-phone"></i> 092662462845</p>
+    </div>
+  </div>
+  <footer>
+    © 2025 Steve Ryan Bach Miguel. All rights reserved.
+  </footer>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+    function toggleContent(button) {
+      const content = button.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
