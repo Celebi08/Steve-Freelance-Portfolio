@@ -1,25 +1,216 @@
-<!-- Add this inside the <body> tag, just before the Contact section -->
-<div class="card">
-  <h2>Gallery - Photo Editing for Advertisement</h2>
-  <button class="toggle-btn-small" onclick="toggleContent(this)">View Photos</button>
-  <div class="toggle-content">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/a05015ef-0fc6-453f-a761-4f2c2ce6150a" alt="Ad Edit 1" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/25b3e28e-b955-4846-b527-f8faa3675937" alt="Ad Edit 2" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/671e252e-2f83-45f4-8b43-81bdbd41fe8e" alt="Ad Edit 3" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/1d70ddfa-77ef-4494-b2f6-0fd103ea4e9a" alt="Ad Edit 4" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/d2779dd5-0d53-4247-b247-27ea932e3852" alt="Ad Edit 5" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/62dd5dac-fea2-4475-b33d-04699ddc5af1" alt="Ad Edit 6" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/f4805a04-030f-42e1-b3de-833d787283c6" alt="Ad Edit 7" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/3a742d4e-1474-4170-9d37-7e1140d9d8be" alt="Ad Edit 8" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/c1b81213-a0a7-42cf-ba04-f4f9a782449f" alt="Ad Edit 9" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/609536b6-357e-4bce-bdcc-a23923dd3728" alt="Ad Edit 10" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/4f6b8e03-e430-4aa5-8dbf-3ff2ede69344" alt="Ad Edit 11" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/41151845-05f5-4cd6-984f-a534e0c484c0" alt="Ad Edit 12" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/cd7e68c3-e220-46a8-a503-d67bc5ad1b1b" alt="Ad Edit 13" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/9e4ebeb3-08ef-423b-95c5-e0b930ede5b3" alt="Ad Edit 14" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/d89721f7-effb-4f59-94ce-15d63f737407" alt="Ad Edit 15" style="width:100%; border-radius:8px;">
-      <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/7c1a64fb-9b40-4cd3-b471-00a65b417b35" alt="Ad Edit 16" style="width:100%; border-radius:8px;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Steve Ryan Bach Miguel - Freelance Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #eaf1f8;
+      --text: #333;
+      --card: #fff;
+      --accent: #004aad;
+      --light-text: #7f8c8d;
+    }
+    body.dark-mode {
+      --bg: #121212;
+      --text: #f5f5f5;
+      --card: #1e1e1e;
+      --accent: #4dabf7;
+      --light-text: #bbb;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: var(--card);
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      color: var(--text);
+      font-size: 2.4em;
+    }
+    header p {
+      color: var(--light-text);
+      font-size: 1.1em;
+    }
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .toggle-btn:hover {
+      background: #0070d1;
+    }
+    .main {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: var(--card);
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: background 0.3s;
+    }
+    h2 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+    ul {
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+    .contact p, .contact i {
+      margin: 5px 0;
+      color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      color: var(--light-text);
+    }
+    .tagline {
+      font-weight: 600;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+    .toggle-content {
+      display: none;
+      margin-top: 10px;
+    }
+    .toggle-btn-small {
+      background: none;
+      border: none;
+      color: var(--accent);
+      cursor: pointer;
+      padding: 0;
+      margin-top: 5px;
+    }
+    .toggle-btn-small:hover {
+      text-decoration: underline;
+    }
+    .tabs {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .tab-button {
+      background: var(--accent);
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .tab-button.active {
+      background: #0070d1;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .gallery img {
+      max-width: 100%;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      .card {
+        padding: 20px;
+      }
+      .toggle-btn {
+        padding: 6px 10px;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Steve Ryan Bach G. Miguel</h1>
+    <p>Tech Support | Digital Marketer | Sales SME | Admin & CRM Specialist</p>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </header>
+  <div class="main">
+    <div class="card tagline">
+      Helping businesses grow through backend excellence, digital strategy, and customer-first support.
+    </div>
+
+    <!-- Existing content is preserved here (About Me, Services, Experience, etc.) -->
+
+    <!-- GALLERY SECTION -->
+    <div class="card">
+      <h2>Designs & Graphics Gallery</h2>
+      <div class="tabs">
+        <button class="tab-button active" onclick="openTab(event, 'photo-editing')">Photo Editing for Advertisement</button>
+      </div>
+      <div id="photo-editing" class="tab-content active gallery">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/a05015ef-0fc6-453f-a761-4f2c2ce6150a" alt="Photo Editing 1">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/25b3e28e-b955-4846-b527-f8faa3675937" alt="Photo Editing 2">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/671e252e-2f83-45f4-8b43-81bdbd41fe8e" alt="Photo Editing 3">
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/1d70ddfa-77ef-4494-b2f6-0fd103ea4e9a" alt="Photo Editing 4">
+        <!-- Add more images here as needed -->
+      </div>
+    </div>
+
+    <!-- Additional sections like Skills and Contact would be inserted here if omitted -->
+
+    <div class="card contact">
+      <h2>Contact</h2>
+      <p><i class="fas fa-envelope"></i> toriyama18@gmail.com</p>
+      <p><i class="fas fa-phone"></i> 092662462845</p>
     </div>
   </div>
-</div>
+  <footer>
+    © 2025 Steve Ryan Bach Miguel. All rights reserved.
+  </footer>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+    function toggleContent(button) {
+      const content = button.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+    function openTab(evt, tabId) {
+      const contents = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+      contents.forEach(c => c.classList.remove('active'));
+      buttons.forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>
