@@ -3,129 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Steve Ryan Bach Miguel - Portfolio</title>
+  <title>Steve Ryan Bach Miguel | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    function toggleDetails(id) {
+      const content = document.getElementById(id);
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+  </script>
 </head>
 <body>
   <header>
     <h1>Steve Ryan Bach Miguel</h1>
-    <p>GitHub Portfolio</p>
+    <p>Professional Portfolio</p>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>A passionate professional with diverse experience across tech support, marketing, sales, and data entry. Proven leadership and technical skills, with a keen eye for digital design and content creation.</p>
-  </section>
-
   <section id="experience">
-    <h2>Experience</h2>
-    <details>
-      <summary>Technical Support Representative - Telus Digital (Oct 25, 2023 – March 31, 2025)</summary>
-      <ul>
-        <li>I provided efficient support for email and computer troubleshooting and did remote sessions if needed to escalate the issue faster.</li>
+    <h2>Work Experience</h2>
+
+    <div class="job">
+      <h3 onclick="toggleDetails('telus')">Technical Support Representative - Telus Digital <span>(Oct 25, 2023 - March 31, 2025)</span></h3>
+      <ul id="telus" style="display: none;">
+        <li>I provided efficient support for email and computer troubleshooting.</li>
         <li>I assisted customers with resolving software issues, connectivity problems, and email configuration, ensuring clear communication and quick resolution.</li>
         <li>My role involved documenting issues, offering step-by-step guidance, and maintaining strong customer satisfaction by addressing technical challenges in a timely manner.</li>
       </ul>
-    </details>
-    <details>
-      <summary>Business Development Manager - Decode Global Philippines Inc. (March 2023 – Sept 2023)</summary>
-      <ul>
-        <li>Developed and executed innovative sales strategies</li>
+    </div>
+
+    <div class="job">
+      <h3 onclick="toggleDetails('decode')">Business Development Manager - Decode Global Philippines Inc. <span>(March 2023 - Sept 2023)</span></h3>
+      <ul id="decode" style="display: none;">
+        <li>Developed and executed innovative sales strategies.</li>
         <li>Established and nurtured strategic partnerships with other leaders, expanding the company's market reach and enhancing brand visibility.</li>
         <li>Conducted comprehensive market research to drive product development efforts and align offerings with market demands.</li>
-        <li>Set up personal meetings with clients/prospects to introduce our business and discuss investment options</li>
+        <li>Set up personal meetings with clients/prospects to introduce our business and discuss investment options.</li>
       </ul>
-    </details>
-    <details>
-      <summary>Digital Marketing Coordinator - Philtech Inc. (April 2022 – March 2023)</summary>
-      <ul>
+    </div>
+
+    <div class="job">
+      <h3 onclick="toggleDetails('philtech')">Digital Marketing Coordinator - Philtech Inc. <span>(April 2022 - March 2023)</span></h3>
+      <ul id="philtech" style="display: none;">
         <li>Managed and organized the company's social media accounts.</li>
         <li>Analyzed digital marketing trends and created content for social media posting.</li>
         <li>Collaborated with cross-functional teams in the department to create captivating and relevant content, driving brand awareness and customer engagement.</li>
-        <li>Managed and grew their social media presence, achieving an increase in followers and engagement through strategic content planning and audience targeting.</li>
+        <li>Managed and grew social media presence, increasing followers and engagement through strategic content planning and audience targeting.</li>
       </ul>
-    </details>
-    <details>
-      <summary>Team Leader - Admerex Solution Inc. (April 2021 – March 2022)</summary>
-      <ul>
-        <li>I guided and supported a team of online proctors.</li>
-        <li>My focus was on ensuring team performance and quality.</li>
-        <li>I provided training and feedback to team members.</li>
-        <li>I helped resolve complex issues and escalations.</li>
-        <li>Monitoring team adherence to protocols was part of my role.</li>
-        <li>I facilitated communication and collaboration within the team.</li>
+    </div>
+
+    <div class="job">
+      <h3 onclick="toggleDetails('admerex')">Teamleader - Admerex Solution Inc. <span>(April 2021 - March 2022)</span></h3>
+      <ul id="admerex" style="display: none;">
+        <li>I guide and support a team of online proctors. My focus is on ensuring team performance and quality.</li>
+        <li>I provide training and feedback to team members.</li>
+        <li>I help resolve complex issues and escalations.</li>
+        <li>Monitoring team adherence to protocols is part of my role.</li>
+        <li>I facilitate communication and collaboration within the team.</li>
       </ul>
-    </details>
-    <details>
-      <summary>Sales Rep / SME - Concentrix (Feb 2020 – Nov 2020)</summary>
-      <ul>
-        <li>I guided agents through their daily routine and reminded them to prioritize quality and satisfaction while staying happy at work.</li>
-        <li>Assisted agents with escalations via chat (Windows Live, Snapchat, and email) when they couldn’t resolve a customer issue.</li>
+    </div>
+
+    <div class="job">
+      <h3 onclick="toggleDetails('concentrix')">Sales Rep / SME - Concentrix <span>(Feb 2020 - Nov 2020)</span></h3>
+      <ul id="concentrix" style="display: none;">
+        <li>I guide agents through their daily routine and remind them not to forget quality and satisfaction when doing their tasks while being happy on the job.</li>
+        <li>Assisted agent escalations through chat via Windows Live, Snapchat, and email when the agent couldn’t handle the customer’s concern.</li>
       </ul>
-    </details>
-    <details>
-      <summary>Sales Manager - Citihomes Builder and Development Inc. (March 2015 – April 2018)</summary>
-      <ul>
+    </div>
+
+    <div class="job">
+      <h3 onclick="toggleDetails('citihomes')">Sales Manager - Citihomes Builder and Development Inc. (MyCitihomes) <span>(March 2015 - April 2018)</span></h3>
+      <ul id="citihomes" style="display: none;">
         <li>Daily huddles before deploying a team on a to-do list.</li>
-        <li>Weekly meetings with the team to ensure everyone had set their own goals to hit sales targets and create strategies.</li>
-        <li>Managed online ads, target places for ads, and boosted Facebook page posts to reach more potential clients.</li>
-        <li>Scheduled weekly saturation efforts in malls or high-potential locations to gather clients.</li>
+        <li>Weekly meetings with the team to ensure goal setting and strategic planning.</li>
+        <li>Managed online ads and Facebook page promotions to attract prospective clients.</li>
+        <li>Scheduled weekly client acquisition events in malls and other prospect locations.</li>
       </ul>
-    </details>
-    <details>
-      <summary>Encoder / Data Entry / Team Captain - Zynco@Uno Cybercafe (Sept 2013 – Feb 2015)</summary>
-      <ul>
-        <li>Encoded every sale, voucher, and time log using MS Excel and Word.</li>
-        <li>Handled and trained teams for e-games competitions/tournaments during weekends or vacant time.</li>
-        <li>Held weekend meetings for strategy discussions and data verification for audits.</li>
+    </div>
+
+    <div class="job">
+      <h3 onclick="toggleDetails('zynco')">Encoder / Data Entry / Team Captain - Zynco@Uno Cybercafe <span>(Sept 2013 - Feb 2015)</span></h3>
+      <ul id="zynco" style="display: none;">
+        <li>Encoded sales, vouchers, and time logs using MS Excel and Word.</li>
+        <li>Trained teams for e-games tournaments during weekends or spare time.</li>
+        <li>Held weekend meetings to review performance, strategies, and audit data.</li>
       </ul>
-    </details>
-    <details>
-      <summary>Encoder / Data Entry - Shavara Machine And Welding Inc. (Aug 2011 – Sep 2013)</summary>
-      <ul>
-        <li>Checked items daily against inventory and stock lists in MS Word and Excel.</li>
-        <li>Processed order slips and handled printing tasks.</li>
-        <li>Compiled completed files and verified data accuracy before forwarding to the manager.</li>
+    </div>
+
+    <div class="job">
+      <h3 onclick="toggleDetails('shavara')">Encoder / Data Entry - Shavara Machine And Welding Inc. <span>(Aug 2011 - Sept 2013)</span></h3>
+      <ul id="shavara" style="display: none;">
+        <li>Checked inventory against daily stock list using MS Word and Excel.</li>
+        <li>Processed and printed order slips.</li>
+        <li>Compiled and verified data for accuracy before forwarding to management.</li>
       </ul>
-    </details>
-    <details>
-      <summary>Encoder / Data Entry - Jaroteac Hardware Inc. (June 2008 – Aug 2011)</summary>
-      <ul>
-        <li>Checked warehouse stock for old and new materials, aligned them with inventory, and logged them in MS Word and Excel.</li>
-        <li>Processed order slips and managed print tasks.</li>
+    </div>
+
+    <div class="job">
+      <h3 onclick="toggleDetails('jaroteac')">Encoder / Data Entry - Jaroteac Hardware Inc. <span>(June 2008 - Aug 2011)</span></h3>
+      <ul id="jaroteac" style="display: none;">
+        <li>Checked warehouse stock for old and new arrivals and updated inventory in MS Word and Excel.</li>
+        <li>Processed and printed order slips.</li>
       </ul>
-    </details>
+    </div>
   </section>
 
   <section id="gallery">
     <h2>Gallery</h2>
-    <div class="gallery-folder">
-      <h3>📂 Photo Editing for Advertisement</h3>
+    <details>
+      <summary>Photo Editing for Advertisement</summary>
       <div class="gallery">
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/a05015ef-0fc6-453f-a761-4f2c2ce6150a" alt="Ad 1" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/25b3e28e-b955-4846-b527-f8faa3675937" alt="Ad 2" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/671e252e-2f83-45f4-8b43-81bdbd41fe8e" alt="Ad 3" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/1d70ddfa-77ef-4494-b2f6-0fd103ea4e9a" alt="Ad 4" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/d2779dd5-0d53-4247-b247-27ea932e3852" alt="Ad 5" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/62dd5dac-fea2-4475-b33d-04699ddc5af1" alt="Ad 6" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/f4805a04-030f-42e1-b3de-833d787283c6" alt="Ad 7" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/3a742d4e-1474-4170-9d37-7e1140d9d8be" alt="Ad 8" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/c1b81213-a0a7-42cf-ba04-f4f9a782449f" alt="Ad 9" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/609536b6-357e-4bce-bdcc-a23923dd3728" alt="Ad 10" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/4f6b8e03-e430-4aa5-8dbf-3ff2ede69344" alt="Ad 11" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/41151845-05f5-4cd6-984f-a534e0c484c0" alt="Ad 12" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/cd7e68c3-e220-46a8-a503-d67bc5ad1b1b" alt="Ad 13" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/9e4ebeb3-08ef-423b-95c5-e0b930ede5b3" alt="Ad 14" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/d89721f7-effb-4f59-94ce-15d63f737407" alt="Ad 15" />
-        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/7c1a64fb-9b40-4cd3-b471-00a65b417b35" alt="Ad 16" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/a05015ef-0fc6-453f-a761-4f2c2ce6150a" alt="Ad Image 1" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/25b3e28e-b955-4846-b527-f8faa3675937" alt="Ad Image 2" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/671e252e-2f83-45f4-8b43-81bdbd41fe8e" alt="Ad Image 3" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/1d70ddfa-77ef-4494-b2f6-0fd103ea4e9a" alt="Ad Image 4" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/d2779dd5-0d53-4247-b247-27ea932e3852" alt="Ad Image 5" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/62dd5dac-fea2-4475-b33d-04699ddc5af1" alt="Ad Image 6" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/f4805a04-030f-42e1-b3de-833d787283c6" alt="Ad Image 7" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/3a742d4e-1474-4170-9d37-7e1140d9d8be" alt="Ad Image 8" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/c1b81213-a0a7-42cf-ba04-f4f9a782449f" alt="Ad Image 9" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/609536b6-357e-4bce-bdcc-a23923dd3728" alt="Ad Image 10" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/4f6b8e03-e430-4aa5-8dbf-3ff2ede69344" alt="Ad Image 11" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/41151845-05f5-4cd6-984f-a534e0c484c0" alt="Ad Image 12" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/cd7e68c3-e220-46a8-a503-d67bc5ad1b1b" alt="Ad Image 13" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/9e4ebeb3-08ef-423b-95c5-e0b930ede5b3" alt="Ad Image 14" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/d89721f7-effb-4f59-94ce-15d63f737407" alt="Ad Image 15" />
+        <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/7c1a64fb-9b40-4cd3-b471-00a65b417b35" alt="Ad Image 16" />
       </div>
-    </div>
+    </details>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:steveryanbachmiguel@gmail.com">steveryanbachmiguel@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/celebi08" target="_blank">github.com/celebi08</a></p>
+    <p>Email: your.email@example.com</p>
+    <p>Phone: 123-456-7890</p>
   </section>
 </body>
 </html>
