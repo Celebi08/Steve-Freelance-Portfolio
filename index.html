@@ -6,92 +6,150 @@
   <title>Steve Ryan Bach Miguel - Freelance Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    :root {
+      --bg: #eaf1f8;
+      --text: #333;
+      --card: #fff;
+      --accent: #004aad;
+      --light-text: #7f8c8d;
+    }
+
+    body.dark-mode {
+      --bg: #121212;
+      --text: #f5f5f5;
+      --card: #1e1e1e;
+      --accent: #4dabf7;
+      --light-text: #bbb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f5f5f5;
-      color: #333;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
     }
 
-    .hero {
-      background: #004aad;
-      color: white;
-      padding: 40px 20px;
+    header {
+      background: var(--card);
+      padding: 30px 20px;
       text-align: center;
-      border-radius: 0 0 20px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: relative;
     }
 
-    .hero h1 {
+    header h1 {
       margin: 0;
-      font-size: 2.5em;
+      color: var(--text);
+      font-size: 2.4em;
     }
 
-    .hero p {
-      font-size: 1.2em;
-      margin-top: 10px;
+    header p {
+      color: var(--light-text);
+      font-size: 1.1em;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background: #0070d1;
+    }
+
+    .main {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: background 0.3s;
     }
 
     h2 {
-      color: #004aad;
       margin-top: 0;
-    }
-
-    .section {
-      background: #fdfdfd;
-      border-left: 4px solid #004aad;
-      padding: 20px;
-      border-radius: 6px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      color: var(--accent);
     }
 
     ul {
       padding-left: 20px;
+      line-height: 1.6;
     }
 
-    .contact-info p {
+    .contact p, .contact i {
       margin: 5px 0;
-    }
-
-    .contact-info i {
-      margin-right: 8px;
-      color: #004aad;
+      color: var(--accent);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      color: #777;
+      padding: 15px;
       font-size: 0.9em;
+      color: var(--light-text);
+    }
+
+    .tagline {
+      font-weight: 600;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .toggle-btn {
+        padding: 6px 10px;
+        font-size: 0.9em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="hero">
+  <header>
     <h1>Steve Ryan Bach G. Miguel</h1>
-    <p>Technical/Customer Support Representative | Business Development Manager | Admin Support | Digital Marketing Coordinator | Sales SME | Real Estate Sales Manager</p>
-  </div>
+    <p>Tech Support | Digital Marketer | Sales SME | Admin & CRM Specialist</p>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </header>
 
-  <div class="container">
-    <p><strong>Helping businesses grow through efficient backend operations, digital strategy, and customer-first service.</strong></p>
-
-    <div class="section about">
-      <h2>About Me</h2>
-      <p>I am a flexible, fast learner, and reliable professional with experience in administrative support, digital marketing, and customer service. I specialize in helping businesses with backend tasks, lead generation, and engagement. I take pride in strong organizational skills, proactive communication, and a driven attitude.</p>
+  <div class="main">
+    <div class="card tagline">
+      Helping businesses grow through backend excellence, digital strategy, and customer-first support.
     </div>
 
-    <div class="section services">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>I am a flexible, fast learner, and reliable professional with experience in administrative support, digital marketing, and customer service. I specialize in backend support, lead generation, and engagement. My strengths lie in being organized, proactive, and results-driven.</p>
+    </div>
+
+    <div class="card">
       <h2>Services Offered</h2>
       <ul>
         <li>Social Media Engagement (follow/unfollow, comments, monitoring)</li>
@@ -103,22 +161,22 @@
       </ul>
     </div>
 
-    <div class="section experience">
+    <div class="card">
       <h2>Experience Highlights</h2>
       <ul>
-        <li><strong>Technical Support Representative</strong> – Telus Digital (2023–2025)<br>Provided support for internet/email issues and technical troubleshooting.</li>
-        <li><strong>Business Development Manager</strong> – Decode Global (2023)<br>Built partnerships, ran outreach campaigns, and conducted market research.</li>
-        <li><strong>Digital Marketing Coordinator</strong> – Philtech Inc. (2022–2023)<br>Managed content, analytics, and community growth on social platforms.</li>
-        <li><strong>Team Leader</strong> – Admerex Solution Inc. (2021–2022)<br>Trained agents, monitored KPIs, and ensured high-quality support standards.</li>
-        <li><strong>Sales Rep / SME</strong> – Concentrix (Feb–Nov 2020)<br>Guided agents on quality support while assisting with escalations via Windows Live, Snapchat, and email.</li>
-        <li><strong>Sales Manager</strong> – CityHomes Builder and Development Inc. (2015–2018)<br>Led a team of real estate agents, handled client presentations, and increased sales conversions.</li>
-        <li><strong>Encoder / Team Captain</strong> – Zynco@Uno Cybercafe (2013–2015)<br>Handled sales and voucher encoding, and trained e-games teams for tournaments. Managed audit data.</li>
-        <li><strong>Encoder / Data Entry</strong> – Shavara Machine and Welding Inc. (2011–2013)<br>Verified inventory, processed orders, and ensured data accuracy for management.</li>
-        <li><strong>Encoder / Data Entry</strong> – Jaroteac Hardware Inc. (2008–2011)<br>Checked warehouse stock and aligned inventory logs in Excel/Word.</li>
+        <li><strong>Technical Support Representative</strong> – Telus Digital (2023–2025)</li>
+        <li><strong>Business Development Manager</strong> – Decode Global (2023)</li>
+        <li><strong>Digital Marketing Coordinator</strong> – Philtech Inc. (2022–2023)</li>
+        <li><strong>Team Leader</strong> – Admerex Solution Inc. (2021–2022)</li>
+        <li><strong>Sales Rep / SME</strong> – Concentrix (Feb–Nov 2020)</li>
+        <li><strong>Sales Manager</strong> – CityHomes Builder and Development Inc. (2015–2018)</li>
+        <li><strong>Encoder / Team Captain</strong> – Zynco@Uno Cybercafe (2013–2015)</li>
+        <li><strong>Encoder / Data Entry</strong> – Shavara Machine and Welding Inc. (2011–2013)</li>
+        <li><strong>Encoder / Data Entry</strong> – Jaroteac Hardware Inc. (2008–2011)</li>
       </ul>
     </div>
 
-    <div class="section skills">
+    <div class="card">
       <h2>Skills</h2>
       <ul>
         <li>Digital Marketing Strategy & Tools (Meta, Canva, YouTube Studio)</li>
@@ -129,7 +187,7 @@
       </ul>
     </div>
 
-    <div class="section contact-info">
+    <div class="card contact">
       <h2>Contact</h2>
       <p><i class="fas fa-envelope"></i> toriyama18@gmail.com</p>
       <p><i class="fas fa-phone"></i> 092662462845</p>
@@ -139,5 +197,12 @@
   <footer>
     &copy; 2025 Steve Ryan Bach Miguel. All rights reserved.
   </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+
 </body>
 </html>
