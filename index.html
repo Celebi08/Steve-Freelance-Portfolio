@@ -33,7 +33,7 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       background: #fff;
       padding: 40px;
@@ -51,13 +51,8 @@
       border-left: 4px solid #004aad;
       padding: 20px;
       border-radius: 6px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease;
-    }
-
-    .section:hover {
-      transform: translateY(-2px);
     }
 
     ul {
@@ -79,56 +74,126 @@
       color: #777;
       font-size: 0.9em;
     }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+      padding: 15px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .project-card h3 {
+      margin: 10px 0 5px;
+      color: #004aad;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #004aad;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .project-card a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
   <div class="hero">
     <h1>Steve Ryan Bach Miguel</h1>
-    <p>Freelance Technical Support | Admin | Sales | Digital Marketing</p>
+    <p>Technical Support | Admin Support | Digital Services | Sales</p>
   </div>
 
   <div class="container">
-    <p><strong>Helping businesses grow through efficient backend operations and digital support.</strong></p>
+    <p><strong>Helping businesses grow through efficient backend operations, digital strategy, and customer-first service.</strong></p>
 
     <div class="section about">
       <h2>About Me</h2>
-      <p>I am a flexible, fast learner, and reliable professional with extensive experience in administrative support, digital marketing, and customer service. I specialize in helping businesses grow through efficient backend operations, lead generation, and online engagement. My goal is to support clients with strong organizational skills, proactive communication, and a driven attitude.</p>
+      <p>I am a flexible, fast learner, and reliable professional with experience in administrative support, digital marketing, and customer service. I specialize in helping businesses with backend tasks, lead generation, and engagement. I take pride in strong organizational skills, proactive communication, and a driven attitude.</p>
     </div>
 
     <div class="section services">
       <h2>Services Offered</h2>
       <ul>
-        <li>Social Media Engagement (follow/unfollow, commenting, checking comments)</li>
+        <li>Social Media Engagement (follow/unfollow, comments, monitoring)</li>
         <li>Email Scraping</li>
-        <li>Data Entry & Spreadsheet Organization</li>
+        <li>Data Entry & Spreadsheet Management</li>
         <li>Digital Marketing Support</li>
         <li>Admin and Repetitive Task Handling</li>
-        <li>Customer/Technical Support (email & chat/remote computer troubleshooting)</li>
+        <li>Customer/Technical Support (email & chat, remote troubleshooting)</li>
       </ul>
     </div>
 
     <div class="section experience">
       <h2>Experience Highlights</h2>
       <ul>
-        <li><strong>Technical Support Representative</strong>, Telus Digital (2023–2025) – Provided tech support and resolved connectivity/email issues.</li>
-        <li><strong>Business Development Manager</strong>, Decode Global (2023) – Executed strategies, built partnerships, and did market research.</li>
-        <li><strong>Digital Marketing Coordinator</strong>, Philtech Inc. (2022–2023) – Managed content and grew social media engagement.</li>
-        <li><strong>Team Leader</strong>, Admerex Solution Inc. (2021–2022) – Trained and supported an online support team.</li>
-        <li><strong>Sales Manager</strong>, CityHomes Builder and Development Inc. (2015–2018) – Led a real estate sales team and managed client presentations.</li>
+        <li><strong>Technical Support Representative</strong> – Telus Digital (2023–2025)<br>Provided support for internet/email issues and technical troubleshooting.</li>
+        <li><strong>Business Development Manager</strong> – Decode Global (2023)<br>Built partnerships, ran outreach campaigns, and conducted market research.</li>
+        <li><strong>Digital Marketing Coordinator</strong> – Philtech Inc. (2022–2023)<br>Managed content, analytics, and community growth on social platforms.</li>
+        <li><strong>Team Leader</strong> – Admerex Solution Inc. (2021–2022)<br>Trained agents, monitored KPIs, and ensured high-quality support standards.</li>
+        <li><strong>Sales Rep / SME</strong> – Concentrix (Feb–Nov 2020)<br>Guided agents on quality support while assisting with escalations via Windows Live, Snapchat, and email.</li>
+        <li><strong>Sales Manager</strong> – CityHomes Builder and Development Inc. (2015–2018)<br>Led a team of real estate agents, handled client presentations, and increased sales conversions.</li>
+        <li><strong>Encoder / Team Captain</strong> – Zynco@Uno Cybercafe (2013–2015)<br>Handled sales and voucher encoding, and trained e-games teams for tournaments. Managed audit data.</li>
+        <li><strong>Encoder / Data Entry</strong> – Shavara Machine and Welding Inc. (2011–2013)<br>Verified inventory, processed orders, and ensured data accuracy for management.</li>
+        <li><strong>Encoder / Data Entry</strong> – Jaroteac Hardware Inc. (2008–2011)<br>Checked warehouse stock and aligned inventory logs in Excel/Word.</li>
       </ul>
     </div>
 
     <div class="section skills">
       <h2>Skills</h2>
       <ul>
-        <li>Digital Marketing Strategy</li>
-        <li>Social Media Management</li>
-        <li>Email Marketing</li>
+        <li>Digital Marketing Strategy & Tools (Meta, Canva, YouTube Studio)</li>
+        <li>CRM Management (HubSpot, Salesforce)</li>
         <li>Admin Support & Data Entry</li>
-        <li>Customer Service</li>
-        <li>Google Sheets, MS Excel & Word</li>
+        <li>Customer Service & Escalation Handling</li>
+        <li>Google Workspace, MS Office Suite</li>
       </ul>
+    </div>
+
+    <div class="section projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x150" alt="Project 1">
+          <h3>YouTube Channel: Oops I Vlogged Again</h3>
+          <p>Built and managed a YouTube Shorts channel focused on daily monetizable content.</p>
+          <a href="#">View Channel</a>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x150" alt="Project 2">
+          <h3>Social Media Automation</h3>
+          <p>Created workflows for engagement, follow-up, and comment response using automation tools.</p>
+          <a href="#">GitHub Repo</a>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x150" alt="Project 3">
+          <h3>CRM Data Cleanup</h3>
+          <p>Performed lead data entry, tagging, and contact organization for marketing campaigns.</p>
+          <a href="#">Details</a>
+        </div>
+      </div>
     </div>
 
     <div class="section contact-info">
