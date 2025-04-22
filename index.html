@@ -114,37 +114,17 @@
     .toggle-btn-small:hover {
       text-decoration: underline;
     }
-    .gallery-tabs {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-    .tab-button {
-      padding: 10px 15px;
-      border: none;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    .tab-button:hover {
-      background: #0061d1;
-    }
-    .gallery-folder {
-      display: none;
-    }
-    .gallery-folder.active {
-      display: block;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 15px;
-    }
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      .card {
+        padding: 20px;
+      }
+      .toggle-btn {
+        padding: 6px 10px;
+        font-size: 0.9em;
+      }
     }
   </style>
 </head>
@@ -158,73 +138,64 @@
     <div class="card tagline">
       Helping businesses grow through backend excellence, digital strategy, and customer-first support.
     </div>
+
     <div class="card">
-      <h2>About Me</h2>
-      <p>I am a flexible, fast learner, and reliable professional with experience in administrative support, digital marketing, and customer service. I specialize in backend support, lead generation, and engagement. My strengths lie in being organized, proactive, and results-driven.</p>
-    </div>
-    <div class="card">
-      <h2>Services Offered</h2>
-      <ul>
-        <li>Social Media Engagement (follow/unfollow, comments, monitoring)</li>
-        <li>Email Scraping</li>
-        <li>Data Entry & Spreadsheet Management</li>
-        <li>Digital Marketing Support</li>
-        <li>Admin and Repetitive Task Handling</li>
-        <li>Customer/Technical Support (email & chat, remote troubleshooting)</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h2>Experience Highlights</h2>
+      <h2>Experience</h2>
       <ul>
         <li>
           <strong>Technical Support Representative</strong> – Telus Digital (Oct 2023 – Mar 2025)
           <button class="toggle-btn-small" onclick="toggleContent(this)">Click to view</button>
           <div class="toggle-content">
             <ul>
-              <li>Provided support for email and computer troubleshooting</li>
-              <li>Resolved software issues, connectivity problems, and more</li>
-              <li>Documented issues and maintained customer satisfaction</li>
+              <li>Handled software troubleshooting for email, OS, app issues</li>
+              <li>Guided customers on computer connectivity and email support</li>
+              <li>Maintained detailed documentation and high satisfaction</li>
             </ul>
           </div>
         </li>
         <li>
-          <strong>Business Development Manager</strong> – Decode Global Philippines Inc.
+          <strong>Business Development Manager</strong> – Decode Global Philippines Inc. (Aug 2022 – Mar 2023)
           <button class="toggle-btn-small" onclick="toggleContent(this)">Click to view</button>
           <div class="toggle-content">
             <ul>
-              <li>Created sales strategies and established partnerships</li>
-              <li>Drove product development and led meetings with prospects</li>
+              <li>Crafted sales strategies and improved product-market fit</li>
+              <li>Built B2B partnerships and conducted sales demos</li>
             </ul>
           </div>
         </li>
-        <!-- Add more experience as needed using same format -->
+        <li>
+          <strong>Sales Supervisor SME</strong> – Converge ICT Solutions (Aug 2020 – Aug 2022)
+          <button class="toggle-btn-small" onclick="toggleContent(this)">Click to view</button>
+          <div class="toggle-content">
+            <ul>
+              <li>Led SME team in achieving fiber sales quotas</li>
+              <li>Handled escalations and customer acquisition support</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <strong>Product Development Executive</strong> – Converge ICT Solutions (Feb 2020 – Aug 2020)
+          <button class="toggle-btn-small" onclick="toggleContent(this)">Click to view</button>
+          <div class="toggle-content">
+            <ul>
+              <li>Researched broadband offerings and recommended new features</li>
+              <li>Collaborated with marketing, sales, and network teams</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <strong>Admin Support (BPO)</strong> – Alorica / Accenture (2017 – 2019)
+          <button class="toggle-btn-small" onclick="toggleContent(this)">Click to view</button>
+          <div class="toggle-content">
+            <ul>
+              <li>Back-office processing and email support</li>
+              <li>CRM tools, ticket handling, and reporting</li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </div>
-    <div class="card">
-      <h2>Skills</h2>
-      <ul>
-        <li>Digital Marketing Strategy & Tools (Meta, Canva, YouTube Studio)</li>
-        <li>CRM Management (HubSpot, Salesforce)</li>
-        <li>Admin Support & Data Entry</li>
-        <li>Customer Service & Escalation Handling</li>
-        <li>Google Workspace, MS Office Suite</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h2>Designs & Graphics Gallery</h2>
-      <div class="gallery-tabs">
-        <button class="tab-button" onclick="showTab('photo-editing')">Photo Editing for Advertisement</button>
-      </div>
-      <div id="photo-editing" class="gallery-folder active">
-        <div class="gallery-grid">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/a05015ef-0fc6-453f-a761-4f2c2ce6150a" />
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/25b3e28e-b955-4846-b527-f8faa3675937" />
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/671e252e-2f83-45f4-8b43-81bdbd41fe8e" />
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/1d70ddfa-77ef-4494-b2f6-0fd103ea4e9a" />
-          <!-- Add more as needed -->
-        </div>
-      </div>
-    </div>
+
     <div class="card contact">
       <h2>Contact</h2>
       <p><i class="fas fa-envelope"></i> toriyama18@gmail.com</p>
@@ -241,11 +212,6 @@
     function toggleContent(button) {
       const content = button.nextElementSibling;
       content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    }
-    function showTab(tabId) {
-      const folders = document.querySelectorAll('.gallery-folder');
-      folders.forEach(folder => folder.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
     }
   </script>
 </body>
