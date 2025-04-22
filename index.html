@@ -56,21 +56,20 @@
 
     .toggle-btn {
       position: absolute;
-      top: 15px;
-      right: 15px;
+      top: 20px;
+      right: 20px;
       background: var(--accent);
       color: #fff;
       border: none;
       padding: 6px 10px;
-      font-size: 1em;
-      border-radius: 50%;
+      font-size: 0.9em;
+      border-radius: 20px;
       cursor: pointer;
       transition: background 0.3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 36px;
-      width: 36px;
+    }
+
+    .toggle-btn:hover {
+      background: #0070d1;
     }
 
     .main {
@@ -117,38 +116,28 @@
       color: var(--text);
     }
 
-    .experience-details {
-      display: none;
-      margin-top: 10px;
-      line-height: 1.6;
-    }
-
-    .view-btn {
-      margin-top: 10px;
-      background: var(--accent);
-      color: white;
-      border: none;
-      padding: 6px 12px;
+    .btn {
+      background-color: var(--accent);
+      color: #fff;
+      padding: 8px 16px;
+      text-align: center;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 0.9em;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
     }
 
-    .view-btn:hover {
-      background: #0070d1;
+    .btn:hover {
+      background-color: #0070d1;
     }
 
-    .experience {
+    .work-experience {
       margin-bottom: 20px;
     }
 
-    .experience strong {
-      font-size: 1.2em;
-      color: var(--accent);
-    }
-
-    .experience-details ul {
-      margin-top: 10px;
+    .contact i {
+      margin-right: 8px;
     }
 
     @media (max-width: 768px) {
@@ -163,8 +152,6 @@
       .toggle-btn {
         padding: 6px 10px;
         font-size: 0.9em;
-        height: 32px;
-        width: 32px;
       }
     }
   </style>
@@ -174,9 +161,7 @@
   <header>
     <h1>Steve Ryan Bach G. Miguel</h1>
     <p>Tech Support | Digital Marketer | Sales SME | Admin & CRM Specialist</p>
-    <button class="toggle-btn" onclick="toggleDarkMode()">
-      <i class="fas fa-moon" id="mode-icon"></i>
-    </button>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
   </header>
 
   <div class="main">
@@ -203,144 +188,70 @@
 
     <div class="card">
       <h2>Experience Highlights</h2>
-      
-      <!-- Work Experience List -->
-      <div class="experience">
-        <strong>Technical Support Representative</strong> – Telus Digital (Oct 25 2023 - March 31 2025)
-        <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
-        <div class="experience-details">
-          <ul>
-            <li>I provided efficient support for email and computer troubleshooting.</li>
-            <li>I assisted customers with resolving software issues, connectivity problems, and email configuration.</li>
-            <li>I documented issues, offered step-by-step guidance, and maintained strong customer satisfaction.</li>
-          </ul>
-        </div>
+      <div class="work-experience">
+        <p><strong>Technical Support Representative</strong> – Telus Digital (Oct 2023 – Mar 2025)</p>
+        <p><a href="#" class="btn">Click to View</a></p>
       </div>
-
-      <div class="experience">
-        <strong>Business Development Manager</strong> – Decode Global Philippines Inc. (March 2023 - Sept 2023)
-        <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
-        <div class="experience-details">
-          <ul>
-            <li>Developed and executed innovative sales strategies.</li>
-            <li>Established strategic partnerships to expand market reach.</li>
-            <li>Conducted market research for product alignment.</li>
-            <li>Met with prospects to introduce offerings.</li>
-          </ul>
-        </div>
+      <div class="work-experience">
+        <p><strong>Business Development Manager</strong> – Decode Global Philippines Inc. (Mar 2023 – Sept 2023)</p>
+        <p><a href="#" class="btn">Click to View</a></p>
       </div>
-
-      <div class="experience">
-        <strong>Digital Marketing Coordinator</strong> – Philtech Inc. (April 2022 - March 2023)
-        <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
-        <div class="experience-details">
-          <ul>
-            <li>Managed and organized the company's social media accounts.</li>
-            <li>Analyzed digital marketing trends and created content for social media posting.</li>
-            <li>Collaborated with cross-functional teams to create captivating content.</li>
-            <li>Increased social media followers and engagement through strategic planning.</li>
-          </ul>
-        </div>
+      <div class="work-experience">
+        <p><strong>Digital Marketing Coordinator</strong> – Philtech Inc. (Apr 2022 – Mar 2023)</p>
+        <p><a href="#" class="btn">Click to View</a></p>
       </div>
-
-      <div class="experience">
-        <strong>Team Leader</strong> – Admerex Solution Inc. (April 2021 - March 2022)
-        <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
-        <div class="experience-details">
-          <ul>
-            <li>Guided and supported a team of online proctors.</li>
-            <li>Provided training and feedback to team members.</li>
-            <li>Handled escalations and complex issues.</li>
-            <li>Monitored team performance and adherence to protocols.</li>
-          </ul>
-        </div>
+      <div class="work-experience">
+        <p><strong>Team Leader</strong> – Admerex Solution Inc. (Apr 2021 – Mar 2022)</p>
+        <p><a href="#" class="btn">Click to View</a></p>
       </div>
-
-      <div class="experience">
-        <strong>Sales Rep/SME</strong> – Concentrix (Feb 2020 - Nov 2020)
-        <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
-        <div class="experience-details">
-          <ul>
-            <li>Guided agents on their daily routine, emphasizing quality and satisfaction.</li>
-            <li>Assisted with agent escalations via chat, email, and Windows Live.</li>
-          </ul>
-        </div>
+      <div class="work-experience">
+        <p><strong>Sales Rep / SME</strong> – Concentrix (Feb 2020 – Nov 2020)</p>
+        <p><a href="#" class="btn">Click to View</a></p>
       </div>
-
-      <div class="experience">
-        <strong>Sales Manager</strong> – Citihomes Builder and Development Inc. (March 2015 - April 2018)
-        <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
-        <div class="experience-details">
-          <ul>
-            <li>Led daily huddles and set team goals for target sales.</li>
-            <li>Managed online ads and Facebook page promotions.</li>
-            <li>Conducted weekly customer saturation activities at malls and prospect locations.</li>
-          </ul>
-        </div>
+      <div class="work-experience">
+        <p><strong>Sales Manager</strong> – Citihomes Builder and Development Inc. (Mar 2015 – Apr 2018)</p>
+        <p><a href="#" class="btn">Click to View</a></p>
       </div>
-
-      <div class="experience">
-        <strong>Encoder/Data Entry/Team Captain</strong> – Zynco@Uno Cybercafe (Sept 2013 - Feb 2015)
-        <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
-        <div class="experience-details">
-          <ul>
-            <li>Encoded sales, vouchers, and time logs in MS Excel and Word.</li>
-            <li>Trained and handled teams for e-games competitions/tournaments.</li>
-            <li>Ensured accuracy in data verification for office audits.</li>
-          </ul>
-        </div>
+      <div class="work-experience">
+        <p><strong>Encoder / Data Entry / Team Captain</strong> – Zynco@Uno Cybercafe (Sept 2013 – Feb 2015)</p>
+        <p><a href="#" class="btn">Click to View</a></p>
       </div>
-
-      <div class="experience">
-        <strong>Encoder/Data Entry</strong> – Shavara Machine And Welding Inc. (Aug 2011 - Sept 2013)
-        <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
-        <div class="experience-details">
-          <ul>
-            <li>Checked items and compared them to the inventory list daily.</li>
-            <li>Processed order slips and printed reports.</li>
-            <li>Ensured that completed files were aligned and forwarded to management.</li>
-          </ul>
-        </div>
+      <div class="work-experience">
+        <p><strong>Encoder / Data Entry</strong> – Shavara Machine and Welding Inc. (Aug 2011 – Sept 2013)</p>
+        <p><a href="#" class="btn">Click to View</a></p>
       </div>
-
-      <div class="experience">
-        <strong>Encoder/Data Entry</strong> – Jaroteac Hardware Inc. (June 2008 - Aug 2011)
-        <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
-        <div class="experience-details">
-          <ul>
-            <li>Checked warehouse stock and ensured inventory alignment.</li>
-            <li>Processed order slips and printed reports.</li>
-          </ul>
-        </div>
+      <div class="work-experience">
+        <p><strong>Encoder / Data Entry</strong> – Jaroteac Hardware Inc. (Jun 2008 – Aug 2011)</p>
+        <p><a href="#" class="btn">Click to View</a></p>
       </div>
-
     </div>
 
-    <!-- Contact Section -->
+    <div class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li>Digital Marketing Strategy & Tools (Meta, Canva, YouTube Studio)</li>
+        <li>CRM Management (HubSpot, Salesforce)</li>
+        <li>Admin Support & Data Entry</li>
+        <li>Customer Service & Escalation Handling</li>
+        <li>Google Workspace, MS Office Suite</li>
+      </ul>
+    </div>
+
     <div class="card contact">
-      <h2>Contact Information</h2>
-      <p><i class="fas fa-phone"></i> Phone: +1 (555) 123-4567</p>
-      <p><i class="fas fa-envelope"></i> Email: steve@example.com</p>
-      <p><i class="fas fa-location-arrow"></i> Location: Manila, Philippines</p>
+      <h2>Contact</h2>
+      <p><i class="fas fa-envelope"></i> toriyama18@gmail.com</p>
+      <p><i class="fas fa-phone"></i> 09626462845</p>
+      <p><i class="fas fa-map-marker-alt"></i> Dasmariñas,Cavite Philippines</p>
     </div>
-
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Steve Ryan Bach Miguel. All rights reserved.</p>
-    </footer>
   </div>
+
+  <footer>
+    © 2025 Steve Ryan Bach Miguel. All rights reserved.
+  </footer>
 
   <script>
     function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-      const icon = document.getElementById('mode-icon');
-      icon.classList.toggle('fa-sun');
-      icon.classList.toggle('fa-moon');
-    }
-
-    function toggleDetails(button) {
-      const details = button.nextElementSibling;
-      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+      document.body.classList.toggle("dark-mode");
     }
   </script>
 
