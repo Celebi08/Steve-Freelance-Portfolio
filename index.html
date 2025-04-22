@@ -99,19 +99,18 @@
       margin-bottom: 20px;
       color: var(--text);
     }
-    .details {
-      margin-top: 10px;
-      padding-left: 15px;
-    }
-    button {
-      margin-left: 10px;
-      background: var(--accent);
-      color: #fff;
+    .experience-item button {
+      background-color: var(--accent);
+      color: white;
       border: none;
-      padding: 4px 10px;
-      border-radius: 12px;
+      padding: 6px 12px;
+      margin: 5px 0;
+      border-radius: 6px;
       cursor: pointer;
-      font-size: 0.8em;
+    }
+    .experience-item .details {
+      display: none;
+      margin-top: 10px;
     }
     @media (max-width: 768px) {
       header h1 {
@@ -128,81 +127,93 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Steve Ryan Bach G. Miguel</h1>
-    <p>Tech Support | Digital Marketer | Sales SME | Admin & CRM Specialist</p>
-    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-  </header>
-
-  <div class="main">
-    <div class="card tagline">
-      Helping businesses grow through backend excellence, digital strategy, and customer-first support.
+<header>
+  <h1>Steve Ryan Bach G. Miguel</h1>
+  <p>Tech Support | Digital Marketer | Sales SME | Admin & CRM Specialist</p>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</header>
+<div class="main">
+  <div class="card tagline">
+    Helping businesses grow through backend excellence, digital strategy, and customer-first support.
+  </div>
+  <div class="card">
+    <h2>About Me</h2>
+    <p>I am a flexible, fast learner, and reliable professional with experience in administrative support, digital marketing, and customer service. I specialize in backend support, lead generation, and engagement. My strengths lie in being organized, proactive, and results-driven.</p>
+  </div>
+  <div class="card">
+    <h2>Services Offered</h2>
+    <ul>
+      <li>Social Media Engagement (follow/unfollow, comments, monitoring)</li>
+      <li>Email Scraping</li>
+      <li>Data Entry & Spreadsheet Management</li>
+      <li>Digital Marketing Support</li>
+      <li>Admin and Repetitive Task Handling</li>
+      <li>Customer/Technical Support (email & chat, remote troubleshooting)</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Experience Highlights</h2>
+    <div class="experience-item">
+      <strong>CRM & Admin Support – CRM Business Solutions</strong>
+      <button onclick="toggleDetails(this)">Click to view</button>
+      <div class="details">
+        <ul>
+          <li>Managed, updated, and cleaned CRM records (HubSpot, Salesforce).</li>
+          <li>Provided accurate reports and analytics support for sales and marketing.</li>
+          <li>Handled backend tasks like data entry, formatting, deduplication, and filtering.</li>
+        </ul>
+      </div>
     </div>
-
-    <div class="card">
-      <h2>About Me</h2>
-      <p>I am a flexible, fast learner, and reliable professional with experience in administrative support, digital marketing, and customer service. I specialize in backend support, lead generation, and engagement. My strengths lie in being organized, proactive, and results-driven.</p>
+    <div class="experience-item">
+      <strong>Digital Marketing & Lead Generation – Freelance</strong>
+      <button onclick="toggleDetails(this)">Click to view</button>
+      <div class="details">
+        <ul>
+          <li>Assisted with social media engagement using tools like Meta, Facebook, and Canva.</li>
+          <li>Executed email scraping campaigns for outbound prospecting.</li>
+          <li>Maintained consistent branding and updates across multiple social media platforms.</li>
+        </ul>
+      </div>
     </div>
-
-    <div class="card">
-      <h2>Services Offered</h2>
-      <ul>
-        <li>Social Media Engagement (follow/unfollow, comments, monitoring)</li>
-        <li>Email Scraping</li>
-        <li>Data Entry & Spreadsheet Management</li>
-        <li>Digital Marketing Support</li>
-        <li>Admin and Repetitive Task Handling</li>
-        <li>Customer/Technical Support (email & chat, remote troubleshooting)</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>Experience Highlights</h2>
-      <ul>
-        <!-- Each list item below uses the toggle pattern -->
-        <!-- START Experience Items -->
-        <!-- These were added dynamically based on your info -->
-        <!-- For brevity, list omitted in this preview but included in full output -->
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>Skills</h2>
-      <ul>
-        <li>Digital Marketing Strategy & Tools (Meta, Canva, YouTube Studio)</li>
-        <li>CRM Management (HubSpot, Salesforce)</li>
-        <li>Admin Support & Data Entry</li>
-        <li>Customer Service & Escalation Handling</li>
-        <li>Google Workspace, MS Office Suite</li>
-      </ul>
-    </div>
-
-    <div class="card contact">
-      <h2>Contact</h2>
-      <p><i class="fas fa-envelope"></i> toriyama18@gmail.com</p>
-      <p><i class="fas fa-phone"></i> 092662462845</p>
+    <div class="experience-item">
+      <strong>Customer Support Specialist – Telco/Software</strong>
+      <button onclick="toggleDetails(this)">Click to view</button>
+      <div class="details">
+        <ul>
+          <li>Resolved customer issues via email and chat with high satisfaction scores.</li>
+          <li>Handled account escalations and technical troubleshooting remotely.</li>
+          <li>Assisted with setting up automation workflows and FAQs to streamline support.</li>
+        </ul>
+      </div>
     </div>
   </div>
-
-  <footer>
-    © 2025 Steve Ryan Bach Miguel. All rights reserved.
-  </footer>
-
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-
-    function toggleDetails(button) {
-      const details = button.nextElementSibling;
-      if (details.style.display === "none" || details.style.display === "") {
-        details.style.display = "block";
-        button.textContent = "Hide";
-      } else {
-        details.style.display = "none";
-        button.textContent = "Click to view";
-      }
-    }
-  </script>
+  <div class="card">
+    <h2>Skills</h2>
+    <ul>
+      <li>Digital Marketing Strategy & Tools (Meta, Canva, YouTube Studio)</li>
+      <li>CRM Management (HubSpot, Salesforce)</li>
+      <li>Admin Support & Data Entry</li>
+      <li>Customer Service & Escalation Handling</li>
+      <li>Google Workspace, MS Office Suite</li>
+    </ul>
+  </div>
+  <div class="card contact">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i> toriyama18@gmail.com</p>
+    <p><i class="fas fa-phone"></i> 092662462845</p>
+  </div>
+</div>
+<footer>
+  © 2025 Steve Ryan Bach Miguel. All rights reserved.
+</footer>
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+  function toggleDetails(btn) {
+    const details = btn.nextElementSibling;
+    details.style.display = details.style.display === "none" ? "block" : "none";
+  }
+</script>
 </body>
 </html>
