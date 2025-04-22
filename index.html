@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+1<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -138,6 +138,19 @@
       background: #0070d1;
     }
 
+    .experience {
+      margin-bottom: 20px;
+    }
+
+    .experience strong {
+      font-size: 1.2em;
+      color: var(--accent);
+    }
+
+    .experience-details ul {
+      margin-top: 10px;
+    }
+
     @media (max-width: 768px) {
       header h1 {
         font-size: 1.8em;
@@ -191,8 +204,8 @@
     <div class="card">
       <h2>Experience Highlights</h2>
       
-      <!-- Technical Support Representative -->
-      <div>
+      <!-- Work Experience List -->
+      <div class="experience">
         <strong>Technical Support Representative</strong> – Telus Digital (Oct 25 2023 - March 31 2025)
         <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
         <div class="experience-details">
@@ -204,22 +217,20 @@
         </div>
       </div>
 
-      <!-- Business Development Manager -->
-      <div>
+      <div class="experience">
         <strong>Business Development Manager</strong> – Decode Global Philippines Inc. (March 2023 - Sept 2023)
         <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
         <div class="experience-details">
           <ul>
-            <li>Developed and executed innovative sales strategies</li>
-            <li>Established strategic partnerships to expand market reach</li>
-            <li>Conducted market research for product alignment</li>
-            <li>Met with prospects to introduce offerings</li>
+            <li>Developed and executed innovative sales strategies.</li>
+            <li>Established strategic partnerships to expand market reach.</li>
+            <li>Conducted market research for product alignment.</li>
+            <li>Met with prospects to introduce offerings.</li>
           </ul>
         </div>
       </div>
 
-      <!-- Digital Marketing Coordinator -->
-      <div>
+      <div class="experience">
         <strong>Digital Marketing Coordinator</strong> – Philtech Inc. (April 2022 - March 2023)
         <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
         <div class="experience-details">
@@ -232,8 +243,7 @@
         </div>
       </div>
 
-      <!-- Team Leader -->
-      <div>
+      <div class="experience">
         <strong>Team Leader</strong> – Admerex Solution Inc. (April 2021 - March 2022)
         <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
         <div class="experience-details">
@@ -246,8 +256,7 @@
         </div>
       </div>
 
-      <!-- Sales Rep/SME -->
-      <div>
+      <div class="experience">
         <strong>Sales Rep/SME</strong> – Concentrix (Feb 2020 - Nov 2020)
         <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
         <div class="experience-details">
@@ -258,8 +267,7 @@
         </div>
       </div>
 
-      <!-- Sales Manager -->
-      <div>
+      <div class="experience">
         <strong>Sales Manager</strong> – Citihomes Builder and Development Inc. (March 2015 - April 2018)
         <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
         <div class="experience-details">
@@ -271,4 +279,45 @@
         </div>
       </div>
 
-      <!-- Encoder/Data
+      <div class="experience">
+        <strong>Encoder/Data Entry/Team Captain</strong> – Zynco@Uno Cybercafe (Sept 2013 - Feb 2015)
+        <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
+        <div class="experience-details">
+          <ul>
+            <li>Encoded sales, vouchers, and time logs in MS Excel and Word.</li>
+            <li>Trained and handled teams for e-games competitions/tournaments.</li>
+            <li>Ensured accuracy in data verification for office audits.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience">
+        <strong>Encoder/Data Entry</strong> – Shavara Machine And Welding Inc. (Aug 2011 - Sept 2013)
+        <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
+        <div class="experience-details">
+          <ul>
+            <li>Checked items and compared them to the inventory list daily.</li>
+            <li>Processed order slips and printed reports.</li>
+            <li>Ensured that completed files were aligned and forwarded to management.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience">
+        <strong>Encoder/Data Entry</strong> – Jaroteac Hardware Inc. (June 2008 - Aug 2011)
+        <button class="view-btn" onclick="toggleDetails(this)">Click to View</button>
+        <div class="experience-details">
+          <ul>
+            <li>Checked warehouse stock and ensured inventory alignment.</li>
+            <li>Processed order slips and printed reports.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Contact Section -->
+    <div class="card contact">
+      <h2>Contact Information</h2>
+      <p><i class="fas fa-phone"></i> Phone: +1 (555) 123-4567</p>
+      <p><i class="fas fa-envelope"></i> Email
