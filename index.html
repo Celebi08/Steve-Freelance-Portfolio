@@ -1,210 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Steve Ryan Bach Miguel - Freelance Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    :root {
-      --bg: #f5f5f5;
-      --text: #333;
-      --card: #fff;
-      --accent: #004aad;
-    }
+<div class="card">
+  <h2>Experience Highlights</h2>
+  <ul>
+    <li>
+      <strong>Technical Support Representative</strong> – Telus Digital (Oct 2023 – Mar 2025)
+      <button onclick="toggleDetails(this)">Click to view</button>
+      <div class="details" style="display:none;">
+        <ul>
+          <li>Provided efficient support for email and computer troubleshooting.</li>
+          <li>Assisted customers with software issues, connectivity problems, and email configuration, ensuring clear communication and quick resolution.</li>
+          <li>Documented issues, offered step-by-step guidance, and maintained customer satisfaction by resolving technical challenges promptly.</li>
+        </ul>
+      </div>
+    </li>
 
-    body.dark-mode {
-      --bg: #121212;
-      --text: #f0f0f0;
-      --card: #1e1e1e;
-      --accent: #4dabf7;
-    }
+    <li>
+      <strong>Business Development Manager</strong> – Decode Global Philippines Inc. (Mar 2023 – Sept 2023)
+      <button onclick="toggleDetails(this)">Click to view</button>
+      <div class="details" style="display:none;">
+        <ul>
+          <li>Developed and executed innovative sales strategies.</li>
+          <li>Established strategic partnerships, expanded market reach, and enhanced brand visibility.</li>
+          <li>Conducted market research to drive product development and aligned offerings with demand.</li>
+          <li>Scheduled meetings to introduce the business and discuss investment options with prospects.</li>
+        </ul>
+      </div>
+    </li>
 
-    * {
-      box-sizing: border-box;
-    }
+    <li>
+      <strong>Digital Marketing Coordinator</strong> – Philtech Inc. (Apr 2022 – Mar 2023)
+      <button onclick="toggleDetails(this)">Click to view</button>
+      <div class="details" style="display:none;">
+        <ul>
+          <li>Managed and organized the company’s social media accounts.</li>
+          <li>Analyzed trends and created content to drive engagement.</li>
+          <li>Collaborated across departments to create relevant content.</li>
+          <li>Increased followers and engagement via strategic content planning.</li>
+        </ul>
+      </div>
+    </li>
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--text);
-      transition: background 0.3s, color 0.3s;
-    }
+    <li>
+      <strong>Team Leader</strong> – Admerex Solution Inc. (Apr 2021 – Mar 2022)
+      <button onclick="toggleDetails(this)">Click to view</button>
+      <div class="details" style="display:none;">
+        <ul>
+          <li>Guided a team of online proctors, focusing on performance and quality.</li>
+          <li>Provided training, feedback, and handled escalations.</li>
+          <li>Monitored adherence to protocols and facilitated communication.</li>
+        </ul>
+      </div>
+    </li>
 
-    .hero {
-      background: var(--accent);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      border-radius: 0 0 20px 20px;
-      position: relative;
-    }
+    <li>
+      <strong>Sales Rep / SME</strong> – Concentrix (Feb 2020 – Nov 2020)
+      <button onclick="toggleDetails(this)">Click to view</button>
+      <div class="details" style="display:none;">
+        <ul>
+          <li>Guided agents to maintain high-quality service with customer satisfaction.</li>
+          <li>Assisted with escalations through chat platforms like Windows Live and Snapchat.</li>
+        </ul>
+      </div>
+    </li>
 
-    .hero h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
+    <li>
+      <strong>Sales Manager</strong> – CityHomes Builder and Development Inc. (2015 – 2018)
+      <button onclick="toggleDetails(this)">Click to view</button>
+      <div class="details" style="display:none;">
+        <ul>
+          <li>Conducted daily huddles and weekly strategic meetings with the sales team.</li>
+          <li>Managed and boosted Facebook ads to attract leads.</li>
+          <li>Organized weekly site saturations for client outreach.</li>
+        </ul>
+      </div>
+    </li>
 
-    .hero p {
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
+    <li>
+      <strong>Encoder / Team Captain</strong> – Zynco@Uno Cybercafe (2013 – 2015)
+      <button onclick="toggleDetails(this)">Click to view</button>
+      <div class="details" style="display:none;">
+        <ul>
+          <li>Encoded sales, vouchers, and time logs in Excel and Word.</li>
+          <li>Trained and led e-games teams during downtime.</li>
+          <li>Held weekend meetings to review strategies and verify data for audits.</li>
+        </ul>
+      </div>
+    </li>
 
-    .toggle-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: white;
-      color: var(--accent);
-      border: none;
-      padding: 6px 12px;
-      border-radius: 15px;
-      font-size: 0.9em;
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s;
-    }
+    <li>
+      <strong>Encoder / Data Entry</strong> – Shavara Machine and Welding Inc. (2011 – 2013)
+      <button onclick="toggleDetails(this)">Click to view</button>
+      <div class="details" style="display:none;">
+        <ul>
+          <li>Checked daily stock items against inventory records.</li>
+          <li>Processed and printed order slips, compiled completed files, and verified data accuracy.</li>
+        </ul>
+      </div>
+    </li>
 
-    .toggle-btn:hover {
-      background: #ddd;
-    }
+    <li>
+      <strong>Encoder / Data Entry</strong> – Jaroteac Hardware Inc. (2008 – 2011)
+      <button onclick="toggleDetails(this)">Click to view</button>
+      <div class="details" style="display:none;">
+        <ul>
+          <li>Monitored warehouse inventory for new and existing materials.</li>
+          <li>Maintained inventory records and processed order slips using Word and Excel.</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
 
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      background: var(--card);
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      transition: background 0.3s;
-    }
-
-    h2 {
-      color: var(--accent);
-      margin-top: 0;
-    }
-
-    .section {
-      background: #fdfdfd;
-      border-left: 4px solid var(--accent);
-      padding: 20px;
-      border-radius: 6px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: background 0.3s;
-    }
-
-    body.dark-mode .section {
-      background: #2a2a2a;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .contact-info p {
-      margin: 5px 0;
-    }
-
-    .contact-info i {
-      margin-right: 8px;
-      color: var(--accent);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #777;
-      font-size: 0.9em;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2em;
-      }
-
-      .container {
-        padding: 20px;
-      }
-
-      .toggle-btn {
-        font-size: 0.8em;
-        padding: 5px 10px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="hero">
-    <h1>Steve Ryan Bach G. Miguel</h1>
-    <p>Technical/Customer Support Representative | Business Development Manager | Admin Support | Digital Marketing Coordinator | Sales SME | Real Estate Sales Manager</p>
-    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
-  </div>
-
-  <div class="container">
-    <p><strong>Helping businesses grow through efficient backend operations, digital strategy, and customer-first service.</strong></p>
-
-    <div class="section about">
-      <h2>About Me</h2>
-      <p>I am a flexible, fast learner, and reliable professional with experience in administrative support, digital marketing, and customer service. I specialize in helping businesses with backend tasks, lead generation, and engagement. I take pride in strong organizational skills, proactive communication, and a driven attitude.</p>
-    </div>
-
-    <div class="section services">
-      <h2>Services Offered</h2>
-      <ul>
-        <li>Social Media Engagement (follow/unfollow, comments, monitoring)</li>
-        <li>Email Scraping</li>
-        <li>Data Entry & Spreadsheet Management</li>
-        <li>Digital Marketing Support</li>
-        <li>Admin and Repetitive Task Handling</li>
-        <li>Customer/Technical Support (email & chat, remote troubleshooting)</li>
-      </ul>
-    </div>
-
-    <div class="section experience">
-      <h2>Experience Highlights</h2>
-      <ul>
-        <li><strong>Technical Support Representative</strong> – Telus Digital (2023–2025)</li>
-        <li><strong>Business Development Manager</strong> – Decode Global (2023)</li>
-        <li><strong>Digital Marketing Coordinator</strong> – Philtech Inc. (2022–2023)</li>
-        <li><strong>Team Leader</strong> – Admerex Solution Inc. (2021–2022)</li>
-        <li><strong>Sales Rep / SME</strong> – Concentrix (Feb–Nov 2020)</li>
-        <li><strong>Sales Manager</strong> – CityHomes Builder and Development Inc. (2015–2018)</li>
-        <li><strong>Encoder / Team Captain</strong> – Zynco@Uno Cybercafe (2013–2015)</li>
-        <li><strong>Encoder / Data Entry</strong> – Shavara Machine and Welding Inc. (2011–2013)</li>
-        <li><strong>Encoder / Data Entry</strong> – Jaroteac Hardware Inc. (2008–2011)</li>
-      </ul>
-    </div>
-
-    <div class="section skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Digital Marketing Strategy & Tools (Meta, Canva, YouTube Studio)</li>
-        <li>CRM Management (HubSpot, Salesforce)</li>
-        <li>Admin Support & Data Entry</li>
-        <li>Customer Service & Escalation Handling</li>
-        <li>Google Workspace, MS Office Suite</li>
-      </ul>
-    </div>
-
-    <div class="section contact-info">
-      <h2>Contact</h2>
-      <p><i class="fas fa-envelope"></i> toriyama18@gmail.com</p>
-      <p><i class="fas fa-phone"></i> 092662462845</p>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 Steve Ryan Bach Miguel. All rights reserved.
-  </footer>
-
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-  </script>
-
-</body>
-</html>
