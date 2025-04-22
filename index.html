@@ -114,32 +114,37 @@
     .toggle-btn-small:hover {
       text-decoration: underline;
     }
-    .gallery-folder h3 {
-      cursor: pointer;
-      color: var(--accent);
+    .gallery-tabs {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
     }
-    .gallery-images {
+    .tab-button {
+      padding: 10px 15px;
+      border: none;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .tab-button:hover {
+      background: #0061d1;
+    }
+    .gallery-folder {
       display: none;
-      margin-top: 10px;
+    }
+    .gallery-folder.active {
+      display: block;
+    }
+    .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 15px;
     }
-    .gallery-images img {
+    .gallery-grid img {
       width: 100%;
-      border-radius: 10px;
-    }
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.8em;
-      }
-      .card {
-        padding: 20px;
-      }
-      .toggle-btn {
-        padding: 6px 10px;
-        font-size: 0.9em;
-      }
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -153,14 +158,10 @@
     <div class="card tagline">
       Helping businesses grow through backend excellence, digital strategy, and customer-first support.
     </div>
-
-    <!-- About -->
     <div class="card">
       <h2>About Me</h2>
       <p>I am a flexible, fast learner, and reliable professional with experience in administrative support, digital marketing, and customer service. I specialize in backend support, lead generation, and engagement. My strengths lie in being organized, proactive, and results-driven.</p>
     </div>
-
-    <!-- Services -->
     <div class="card">
       <h2>Services Offered</h2>
       <ul>
@@ -172,8 +173,33 @@
         <li>Customer/Technical Support (email & chat, remote troubleshooting)</li>
       </ul>
     </div>
-
-    <!-- Skills -->
+    <div class="card">
+      <h2>Experience Highlights</h2>
+      <ul>
+        <li>
+          <strong>Technical Support Representative</strong> – Telus Digital (Oct 2023 – Mar 2025)
+          <button class="toggle-btn-small" onclick="toggleContent(this)">Click to view</button>
+          <div class="toggle-content">
+            <ul>
+              <li>Provided support for email and computer troubleshooting</li>
+              <li>Resolved software issues, connectivity problems, and more</li>
+              <li>Documented issues and maintained customer satisfaction</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <strong>Business Development Manager</strong> – Decode Global Philippines Inc.
+          <button class="toggle-btn-small" onclick="toggleContent(this)">Click to view</button>
+          <div class="toggle-content">
+            <ul>
+              <li>Created sales strategies and established partnerships</li>
+              <li>Drove product development and led meetings with prospects</li>
+            </ul>
+          </div>
+        </li>
+        <!-- Add more experience as needed using same format -->
+      </ul>
+    </div>
     <div class="card">
       <h2>Skills</h2>
       <ul>
@@ -184,27 +210,21 @@
         <li>Google Workspace, MS Office Suite</li>
       </ul>
     </div>
-
-    <!-- Gallery -->
     <div class="card">
       <h2>Designs & Graphics Gallery</h2>
-      <div class="gallery-folder">
-        <h3 onclick="toggleGallery(this)">📁 Photo Editing for Advertisement</h3>
-        <div class="gallery-images">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/a05015ef-0fc6-453f-a761-4f2c2ce6150a" alt="Gallery Image" />
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/25b3e28e-b955-4846-b527-f8faa3675937" alt="Gallery Image" />
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/671e252e-2f83-45f4-8b43-81bdbd41fe8e" alt="Gallery Image" />
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/1d70ddfa-77ef-4494-b2f6-0fd103ea4e9a" alt="Gallery Image" />
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/d2779dd5-0d53-4247-b247-27ea932e3852" alt="Gallery Image" />
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/62dd5dac-fea2-4475-b33d-04699ddc5af1" alt="Gallery Image" />
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/f4805a04-030f-42e1-b3de-833d787283c6" alt="Gallery Image" />
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/3a742d4e-1474-4170-9d37-7e1140d9d8be" alt="Gallery Image" />
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/c1b81213-a0a7-42cf-ba04-f4f9a782449f" alt="Gallery Image" />
+      <div class="gallery-tabs">
+        <button class="tab-button" onclick="showTab('photo-editing')">Photo Editing for Advertisement</button>
+      </div>
+      <div id="photo-editing" class="gallery-folder active">
+        <div class="gallery-grid">
+          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/a05015ef-0fc6-453f-a761-4f2c2ce6150a" />
+          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/25b3e28e-b955-4846-b527-f8faa3675937" />
+          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/671e252e-2f83-45f4-8b43-81bdbd41fe8e" />
+          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/1d70ddfa-77ef-4494-b2f6-0fd103ea4e9a" />
+          <!-- Add more as needed -->
         </div>
       </div>
     </div>
-
-    <!-- Contact -->
     <div class="card contact">
       <h2>Contact</h2>
       <p><i class="fas fa-envelope"></i> toriyama18@gmail.com</p>
@@ -222,9 +242,10 @@
       const content = button.nextElementSibling;
       content.style.display = content.style.display === 'block' ? 'none' : 'block';
     }
-    function toggleGallery(element) {
-      const gallery = element.nextElementSibling;
-      gallery.style.display = gallery.style.display === 'grid' ? 'none' : 'grid';
+    function showTab(tabId) {
+      const folders = document.querySelectorAll('.gallery-folder');
+      folders.forEach(folder => folder.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
     }
   </script>
 </body>
