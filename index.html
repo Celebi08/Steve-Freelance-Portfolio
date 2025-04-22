@@ -7,19 +7,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
-      --bg: #eaf1f8;
+      --bg: #f5f5f5;
       --text: #333;
       --card: #fff;
       --accent: #004aad;
-      --light-text: #7f8c8d;
     }
 
     body.dark-mode {
       --bg: #121212;
-      --text: #f5f5f5;
+      --text: #f0f0f0;
       --card: #1e1e1e;
       --accent: #4dabf7;
-      --light-text: #bbb;
     }
 
     * {
@@ -27,7 +25,7 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background: var(--bg);
@@ -35,121 +33,125 @@
       transition: background 0.3s, color 0.3s;
     }
 
-    header {
-      background: var(--card);
-      padding: 30px 20px;
+    .hero {
+      background: var(--accent);
+      color: white;
+      padding: 40px 20px;
       text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-radius: 0 0 20px 20px;
       position: relative;
     }
 
-    header h1 {
+    .hero h1 {
       margin: 0;
-      color: var(--text);
-      font-size: 2.4em;
+      font-size: 2.5em;
     }
 
-    header p {
-      color: var(--light-text);
-      font-size: 1.1em;
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 10px;
     }
 
     .toggle-btn {
       position: absolute;
       top: 20px;
       right: 20px;
-      background: var(--accent);
-      color: #fff;
+      background: white;
+      color: var(--accent);
       border: none;
-      padding: 8px 14px;
-      border-radius: 20px;
+      padding: 6px 12px;
+      border-radius: 15px;
+      font-size: 0.9em;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: background 0.3s, color 0.3s;
     }
 
     .toggle-btn:hover {
-      background: #0070d1;
+      background: #ddd;
     }
 
-    .main {
-      max-width: 1100px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    .card {
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
       background: var(--card);
-      padding: 30px;
-      margin-bottom: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       transition: background 0.3s;
     }
 
     h2 {
-      margin-top: 0;
       color: var(--accent);
+      margin-top: 0;
+    }
+
+    .section {
+      background: #fdfdfd;
+      border-left: 4px solid var(--accent);
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: background 0.3s;
+    }
+
+    body.dark-mode .section {
+      background: #2a2a2a;
     }
 
     ul {
       padding-left: 20px;
-      line-height: 1.6;
     }
 
-    .contact p, .contact i {
+    .contact-info p {
       margin: 5px 0;
+    }
+
+    .contact-info i {
+      margin-right: 8px;
       color: var(--accent);
     }
 
     footer {
       text-align: center;
-      padding: 15px;
+      padding: 20px;
+      color: #777;
       font-size: 0.9em;
-      color: var(--light-text);
-    }
-
-    .tagline {
-      font-weight: 600;
-      font-size: 1.1em;
-      margin-bottom: 20px;
-      color: var(--text);
     }
 
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.8em;
+      .hero h1 {
+        font-size: 2em;
       }
 
-      .card {
+      .container {
         padding: 20px;
       }
 
       .toggle-btn {
-        padding: 6px 10px;
-        font-size: 0.9em;
+        font-size: 0.8em;
+        padding: 5px 10px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <div class="hero">
     <h1>Steve Ryan Bach G. Miguel</h1>
-    <p>Tech Support | Digital Marketer | Sales SME | Admin & CRM Specialist</p>
-    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-  </header>
+    <p>Technical/Customer Support Representative | Business Development Manager | Admin Support | Digital Marketing Coordinator | Sales SME | Real Estate Sales Manager</p>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
+  </div>
 
-  <div class="main">
-    <div class="card tagline">
-      Helping businesses grow through backend excellence, digital strategy, and customer-first support.
-    </div>
+  <div class="container">
+    <p><strong>Helping businesses grow through efficient backend operations, digital strategy, and customer-first service.</strong></p>
 
-    <div class="card">
+    <div class="section about">
       <h2>About Me</h2>
-      <p>I am a flexible, fast learner, and reliable professional with experience in administrative support, digital marketing, and customer service. I specialize in backend support, lead generation, and engagement. My strengths lie in being organized, proactive, and results-driven.</p>
+      <p>I am a flexible, fast learner, and reliable professional with experience in administrative support, digital marketing, and customer service. I specialize in helping businesses with backend tasks, lead generation, and engagement. I take pride in strong organizational skills, proactive communication, and a driven attitude.</p>
     </div>
 
-    <div class="card">
+    <div class="section services">
       <h2>Services Offered</h2>
       <ul>
         <li>Social Media Engagement (follow/unfollow, comments, monitoring)</li>
@@ -161,7 +163,7 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="section experience">
       <h2>Experience Highlights</h2>
       <ul>
         <li><strong>Technical Support Representative</strong> – Telus Digital (2023–2025)</li>
@@ -176,7 +178,7 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="section skills">
       <h2>Skills</h2>
       <ul>
         <li>Digital Marketing Strategy & Tools (Meta, Canva, YouTube Studio)</li>
@@ -187,7 +189,7 @@
       </ul>
     </div>
 
-    <div class="card contact">
+    <div class="section contact-info">
       <h2>Contact</h2>
       <p><i class="fas fa-envelope"></i> toriyama18@gmail.com</p>
       <p><i class="fas fa-phone"></i> 092662462845</p>
