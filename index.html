@@ -1,4 +1,4 @@
-1<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -320,4 +320,29 @@
     <div class="card contact">
       <h2>Contact Information</h2>
       <p><i class="fas fa-phone"></i> Phone: +1 (555) 123-4567</p>
-      <p><i class="fas fa-envelope"></i> Email
+      <p><i class="fas fa-envelope"></i> Email: steve@example.com</p>
+      <p><i class="fas fa-location-arrow"></i> Location: Manila, Philippines</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Steve Ryan Bach Miguel. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const icon = document.getElementById('mode-icon');
+      icon.classList.toggle('fa-sun');
+      icon.classList.toggle('fa-moon');
+    }
+
+    function toggleDetails(button) {
+      const details = button.nextElementSibling;
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
