@@ -6,6 +6,7 @@
   <title>Steve Ryan Bach Miguel - Freelance Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    /* Define CSS Variables */
     :root {
         --bg: #eaf1f8;
         --text: #333;
@@ -22,6 +23,7 @@
         --light-text: #bbb;
     }
 
+    /* Reset box-sizing and general styles */
     * {
         box-sizing: border-box;
     }
@@ -140,28 +142,6 @@
         margin-right: 8px;
     }
 
-    .gallery-images {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-        margin-top: 15px;
-    }
-
-    .gallery-images img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        cursor: pointer;  /* Add cursor pointer for images */
-    }
-
-    summary {
-        font-weight: bold;
-        cursor: pointer;
-        color: var(--accent);
-        font-size: 1.1em;
-    }
-
     /* Styles for the Modals */
     .modal {
         display: none; /* Hidden by default */
@@ -180,6 +160,8 @@
         display: block;
         max-width: 90%;
         max-height: 80%;
+        text-align: center;
+        color: #fff;
     }
 
     .close {
@@ -189,25 +171,7 @@
         color: #fff;
         font-size: 40px;
         font-weight: bold;
-        transition: 0.3s;
         cursor: pointer;
-    }
-
-    .close:hover, .close:focus {
-        color: #bbb;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    #caption {
-        margin: auto;
-        text-align: center;
-        color: #fff;
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        right: 0;
-        font-size: 16px;
     }
 
     @media (max-width: 768px) {
@@ -262,39 +226,39 @@
       <h2>Experience Highlights</h2>
       <div class="work-experience">
         <p><strong>Technical Support Representative</strong> – Telus Digital (Oct 2023 – Mar 2025)</p>
-        <p><a href="#" class="btn" onclick="showExperienceDetails('Technical Support Representative', 'Telus Digital', 'Details about your role and achievements.'); return false;">Click to View</a></p>
+        <p><a href="#" class="btn" onclick="showExperienceDetails('Technical Support Representative', 'Telus Digital', 'Responsibilities include providing technical support and troubleshooting customer inquiries.'); return false;">Click to View</a></p>
       </div>
       <div class="work-experience">
         <p><strong>Business Development Manager</strong> – Decode Global Philippines Inc. (Mar 2023 – Sept 2023)</p>
-        <p><a href="#" class="btn" onclick="showExperienceDetails('Business Development Manager', 'Decode Global', 'Details about your role and achievements.'); return false;">Click to View</a></p>
+        <p><a href="#" class="btn" onclick="showExperienceDetails('Business Development Manager', 'Decode Global', 'Responsibilities include managing client relationships and developing business strategies.'); return false;">Click to View</a></p>
       </div>
       <div class="work-experience">
         <p><strong>Digital Marketing Coordinator</strong> – Philtech Inc. (Apr 2022 – Mar 2023)</p>
-        <p><a href="#" class="btn" onclick="showExperienceDetails('Digital Marketing Coordinator', 'Philtech', 'Details about your role and achievements.'); return false;">Click to View</a></p>
+        <p><a href="#" class="btn" onclick="showExperienceDetails('Digital Marketing Coordinator', 'Philtech', 'Responsibilities include developing digital marketing campaigns and analyzing performance metrics.'); return false;">Click to View</a></p>
       </div>
       <div class="work-experience">
         <p><strong>Team Leader</strong> – Admerex Solution Inc. (Apr 2021 – Mar 2022)</p>
-        <p><a href="#" class="btn" onclick="showExperienceDetails('Team Leader', 'Admerex', 'Details about your role and achievements.'); return false;">Click to View</a></p>
+        <p><a href="#" class="btn" onclick="showExperienceDetails('Team Leader', 'Admerex', 'Responsibilities include leading a team of support agents and ensuring quality customer service.'); return false;">Click to View</a></p>
       </div>
       <div class="work-experience">
         <p><strong>Sales Rep / SME</strong> – Concentrix (Feb 2020 – Nov 2020)</p>
-        <p><a href="#" class="btn" onclick="showExperienceDetails('Sales Rep / SME', 'Concentrix', 'Details about your role and achievements.'); return false;">Click to View</a></p>
+        <p><a href="#" class="btn" onclick="showExperienceDetails('Sales Rep / SME', 'Concentrix', 'Responsibilities include handling customer inquiries and providing product knowledge.'); return false;">Click to View</a></p>
       </div>
       <div class="work-experience">
         <p><strong>Sales Manager</strong> – Citihomes Builder and Development Inc. (Mar 2015 – Apr 2018)</p>
-        <p><a href="#" class="btn" onclick="showExperienceDetails('Sales Manager', 'Citihomes', 'Details about your role and achievements.'); return false;">Click to View</a></p>
+        <p><a href="#" class="btn" onclick="showExperienceDetails('Sales Manager', 'Citihomes', 'Responsibilities include managing sales teams and driving sales strategies.'); return false;">Click to View</a></p>
       </div>
       <div class="work-experience">
         <p><strong>Encoder / Data Entry / Team Captain</strong> – Zynco@Uno Cybercafe (Sept 2013 – Feb 2015)</p>
-        <p><a href="#" class="btn" onclick="showExperienceDetails('Encoder / Data Entry', 'Zynco@Uno', 'Details about your role and achievements.'); return false;">Click to View</a></p>
+        <p><a href="#" class="btn" onclick="showExperienceDetails('Encoder / Data Entry', 'Zynco@Uno', 'Responsibilities include data entry and managing team tasks.'); return false;">Click to View</a></p>
       </div>
       <div class="work-experience">
         <p><strong>Encoder / Data Entry</strong> – Shavara Machine and Welding Inc. (Aug 2011 – Sept 2013)</p>
-        <p><a href="#" class="btn" onclick="showExperienceDetails('Encoder / Data Entry', 'Shavara', 'Details about your role and achievements.'); return false;">Click to View</a></p>
+        <p><a href="#" class="btn" onclick="showExperienceDetails('Encoder / Data Entry', 'Shavara', 'Responsibilities include maintaining database records and entry accuracy.'); return false;">Click to View</a></p>
       </div>
       <div class="work-experience">
         <p><strong>Encoder / Data Entry</strong> – Jaroteac Hardware Inc. (Jun 2008 – Aug 2011)</p>
-        <p><a href="#" class="btn" onclick="showExperienceDetails('Encoder / Data Entry', 'Jaroteac', 'Details about your role and achievements.'); return false;">Click to View</a></p>
+        <p><a href="#" class="btn" onclick="showExperienceDetails('Encoder / Data Entry', 'Jaroteac', 'Responsibilities include data processing and office support tasks.'); return false;">Click to View</a></p>
       </div>
     </div>
 
@@ -316,60 +280,12 @@
       <p><i class="fas fa-map-marker-alt"></i> Dasmariñas, Cavite Philippines</p>
     </div>
 
-    <!-- Gallery Section with Modal -->
-    <div class="card">
-      <h2>Gallery</h2>
-
-      <details>
-        <summary>Photo Editing for Advertisement</summary>
-        <div class="gallery-images">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/a05015ef-0fc6-453f-a761-4f2c2ce6150a" alt="Image 1" onclick="openModal(this.src, 'Image 1')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/25b3e28e-b955-4846-b527-f8faa3675937" alt="Image 2" onclick="openModal(this.src, 'Image 2')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/671e252e-2f83-45f4-8b43-81bdbd41fe8e" alt="Image 3" onclick="openModal(this.src, 'Image 3')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/1d70ddfa-77ef-4494-b2f6-0fd103ea4e9a" alt="Image 4" onclick="openModal(this.src, 'Image 4')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/d2779dd5-0d53-4247-b247-27ea932e3852" alt="Image 5" onclick="openModal(this.src, 'Image 5')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/62dd5dac-fea2-4475-b33d-04699ddc5af1" alt="Image 6" onclick="openModal(this.src, 'Image 6')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/f4805a04-030f-42e1-b3de-833d787283c6" alt="Image 7" onclick="openModal(this.src, 'Image 7')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/3a742d4e-1474-4170-9d37-7e1140d9d8be" alt="Image 8" onclick="openModal(this.src, 'Image 8')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/c1b81213-a0a7-42cf-ba04-f4f9a782449f" alt="Image 9" onclick="openModal(this.src, 'Image 9')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/609536b6-357e-4bce-bdcc-a23923dd3728" alt="Image 10" onclick="openModal(this.src, 'Image 10')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/4f6b8e03-e430-4aa5-8dbf-3ff2ede69344" alt="Image 11" onclick="openModal(this.src, 'Image 11')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/41151845-05f5-4cd6-984f-a534e0c484c0" alt="Image 12" onclick="openModal(this.src, 'Image 12')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/cd7e68c3-e220-46a8-a503-d67bc5ad1b1b" alt="Image 13" onclick="openModal(this.src, 'Image 13')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/9e4ebeb3-08ef-423b-95c5-e0b930ede5b3" alt="Image 14" onclick="openModal(this.src, 'Image 14')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/d89721f7-effb-4f59-94ce-15d63f737407" alt="Image 15" onclick="openModal(this.src, 'Image 15')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/7c1a64fb-9b40-4cd3-b471-00a65b417b35" alt="Image 16" onclick="openModal(this.src, 'Image 16')">
-        </div>
-      </details>
-
-      <details>
-        <summary>Event Organizer</summary>
-        <div class="gallery-images">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/b008616c-bd60-47d8-a4a3-f08ce64aae61" alt="Event 1" onclick="openModal(this.src, 'Event 1')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/d522b59d-491e-4098-b191-45dfff8fe029" alt="Event 2" onclick="openModal(this.src, 'Event 2')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/4e905e89-3a46-4c8d-8d19-f55702ef20a6" alt="Event 3" onclick="openModal(this.src, 'Event 3')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/4f62d313-787c-41d9-8552-42f46e75da27" alt="Event 4" onclick="openModal(this.src, 'Event 4')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/9a81e8ae-d7e1-4e95-a6cf-d34d0dcaf5fa" alt="Event 5" onclick="openModal(this.src, 'Event 5')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/f518f7fa-865f-47ca-b3e1-20d5f65d2216" alt="Event 6" onclick="openModal(this.src, 'Event 6')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/4a9e2357-f1f9-48a0-8341-85d210ceceb0" alt="Event 7" onclick="openModal(this.src, 'Event 7')">
-          <img src="https://www.upwork.com/att/download/portfolio/persons/uid/528011699236139008/profile/projects/files/f87cebca-a5b9-4c01-8c8e-07a3ce7c6a90" alt="Event 8" onclick="openModal(this.src, 'Event 8')">
-        </div>
-      </details>
-    </div>
-
-    <!-- Modal for Image Enlargement -->
-    <div id="imageModal" class="modal">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <img class="modal-content" id="modalImage" alt="Enlarged Image">
-      <div id="caption"></div>
-    </div>
-
     <!-- Modal for Experience Detail -->
     <div id="experienceModal" class="modal">
       <span class="close" onclick="closeExperienceModal()">&times;</span>
-      <div class="modal-content" style="text-align: center;">
+      <div class="modal-content">
         <h2 id="experienceTitle"></h2>
-        <p id="experienceCompany"></p>
+        <h4 id="experienceCompany"></h4>
         <p id="experienceDetails"></p>
       </div>
     </div>
@@ -391,46 +307,24 @@
       }
     }
 
-    function openModal(imageSrc, captionText) {
-      var modal = document.getElementById("imageModal");
-      var modalImage = document.getElementById("modalImage");
-      var caption = document.getElementById("caption");
-
-      modal.style.display = "block";
-      modalImage.src = imageSrc;
-      caption.innerHTML = captionText;
-    }
-
-    function closeModal() {
-      var modal = document.getElementById("imageModal");
-      modal.style.display = "none";
-    }
-
     function showExperienceDetails(title, company, details) {
-      var experienceModal = document.getElementById("experienceModal");
-      var experienceTitle = document.getElementById("experienceTitle");
-      var experienceCompany = document.getElementById("experienceCompany");
-      var experienceDetails = document.getElementById("experienceDetails");
+      // Set modal content
+      document.getElementById("experienceTitle").innerText = title;
+      document.getElementById("experienceCompany").innerText = company;
+      document.getElementById("experienceDetails").innerText = details;
 
-      experienceTitle.innerHTML = title;
-      experienceCompany.innerHTML = company;
-      experienceDetails.innerHTML = details;
-
-      experienceModal.style.display = "block";
+      // Display modal
+      document.getElementById("experienceModal").style.display = "block";
     }
 
     function closeExperienceModal() {
-      var experienceModal = document.getElementById("experienceModal");
-      experienceModal.style.display = "none";
+      document.getElementById("experienceModal").style.display = "none";
     }
 
-    // Close the modal when clicking anywhere outside of the modal content
+    // Close the modal when clicking on the close button (×) or outside the modal
     window.onclick = function(event) {
-      var imageModal = document.getElementById("imageModal");
-      var experienceModal = document.getElementById("experienceModal");
-      if (event.target === imageModal) {
-        closeModal();
-      } else if (event.target === experienceModal) {
+      const modal = document.getElementById("experienceModal");
+      if (event.target === modal) {
         closeExperienceModal();
       }
     }
